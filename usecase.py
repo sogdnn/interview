@@ -1,6 +1,4 @@
-# ==========================================
 # USE CASE: Interview App System
-# ==========================================
 
 # USE CASE 1: Register user
 def register_user(user_id, name, email, password):
@@ -56,9 +54,8 @@ def add_job_role(role_name, category):
     print(f"[ADMIN] Job role added: '{role_name}' in category '{category}'")
 
 
-# ==========================================
 # RUN ALL USE CASES
-# ==========================================
+
 if __name__ == "__main__":
 
     print("=" * 50)
