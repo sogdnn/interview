@@ -1,0 +1,92 @@
+# ==========================================
+# USE CASE: Interview App System
+# ==========================================
+
+# USE CASE 1: Register user
+def register_user(user_id, name, email, password):
+    print(f"[REGISTER] User '{name}' registered successfully.")
+    return {"user_id": user_id, "name": name, "email": email, "level": "beginner"}
+
+# USE CASE 2: Login user
+def login_user(email, password):
+    print(f"[LOGIN] User '{email}' logged in.")
+    return True
+
+# USE CASE 3: Start interview
+def start_interview(user, role):
+    print(f"[INTERVIEW] {user['name']} started interview for '{role}'.")
+    return {"interview_id": 1, "role": role, "difficulty": "easy"}
+
+# USE CASE 4: Answer question
+def answer_question(interview, question, answer):
+    print(f"[ANSWER] Question: '{question}'")
+    print(f"         Answer:   '{answer}'")
+
+# USE CASE 5: Receive AI feedback
+def receive_feedback(answer):
+    feedback = "Good answer! Try to give more examples next time."
+    confidence = 75
+    grammar = 85
+    print(f"[AI FEEDBACK] {feedback}")
+    print(f"              Confidence: {confidence} | Grammar: {grammar}")
+    return feedback
+
+# USE CASE 6: Adaptive difficulty
+def adapt_difficulty(score):
+    if score >= 70:
+        next_level = "medium"
+    else:
+        next_level = "easy"
+    print(f"[ADAPTIVE] Score {score} -> Next difficulty: '{next_level}'")
+    return next_level
+
+# USE CASE 7: Track skill progress
+def track_progress(user, communication, technical, confidence):
+    print(f"[PROGRESS] {user['name']} skills:")
+    print(f"           Communication: {communication}")
+    print(f"           Technical:     {technical}")
+    print(f"           Confidence:    {confidence}")
+
+# USE CASE 8 (Admin): Manage questions
+def add_question(role, difficulty, question):
+    print(f"[ADMIN] Question added for '{role}' ({difficulty}): '{question}'")
+
+# USE CASE 9 (Admin): Manage job roles
+def add_job_role(role_name, category):
+    print(f"[ADMIN] Job role added: '{role_name}' in category '{category}'")
+
+
+# ==========================================
+# RUN ALL USE CASES
+# ==========================================
+if __name__ == "__main__":
+
+    print("=" * 50)
+    user = register_user(1, "Aliya", "aliya@mail.ru", "1234")
+
+    print("=" * 50)
+    login_user("aliya@mail.ru", "1234")
+
+    print("=" * 50)
+    interview = start_interview(user, "Python Developer")
+
+    print("=" * 50)
+    answer_question(interview, "What is a list in Python?", "A list stores multiple items.")
+
+    print("=" * 50)
+    receive_feedback("A list stores multiple items.")
+
+    print("=" * 50)
+    adapt_difficulty(75)
+
+    print("=" * 50)
+    track_progress(user, 70, 80, 75)
+
+    print("=" * 50)
+    add_question("Python Developer", "easy", "What is a function?")
+
+    print("=" * 50)
+    add_job_role("Data Analyst", "IT")
+
+    print("=" * 50)
+    print("All use cases done!")
