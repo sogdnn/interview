@@ -18,7 +18,7 @@ cursor.execute("""
 """)
 
 
-# JOB ROLES
+# JOB_ROLES
 
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS JOB_ROLES (
@@ -59,7 +59,7 @@ cursor.execute("""
 """)
 
 
-# ANSWER ANALYSIS
+# ANSWER_ANALYSIS
 
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS ANSWER_ANALYSIS (
@@ -72,7 +72,7 @@ cursor.execute("""
     )
 """)
 
-# ADAPTIVE ENGINE
+# ADAPTIVE_ENGINE
 
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS ADAPTIVE_ENGINE (
@@ -85,7 +85,7 @@ cursor.execute("""
 """)
 
 
-# SKILL PROGRESS
+# SKILL_PROGRESS
 
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS SKILL_PROGRESS (
