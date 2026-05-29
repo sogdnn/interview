@@ -4,9 +4,9 @@ import sqlite3
 conn = sqlite3.connect("interview_app.db")
 cursor = conn.cursor()
 
-# --------------------------------------------------
+
 # USERS
-# --------------------------------------------------
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS USERS (
         user_id   INTEGER PRIMARY KEY,
@@ -17,9 +17,9 @@ cursor.execute("""
     )
 """)
 
-# --------------------------------------------------
-# JOB_ROLES
-# --------------------------------------------------
+
+# JOB ROLES
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS JOB_ROLES (
         role_id     INTEGER PRIMARY KEY,
@@ -29,9 +29,9 @@ cursor.execute("""
     )
 """)
 
-# --------------------------------------------------
+
 # QUESTIONS
-# --------------------------------------------------
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS QUESTIONS (
         question_id INTEGER PRIMARY KEY,
@@ -42,9 +42,9 @@ cursor.execute("""
     )
 """)
 
-# --------------------------------------------------
+
 # INTERVIEWS
-# --------------------------------------------------
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS INTERVIEWS (
         interview_id   INTEGER PRIMARY KEY,
@@ -58,9 +58,9 @@ cursor.execute("""
     )
 """)
 
-# --------------------------------------------------
-# ANSWER_ANALYSIS
-# --------------------------------------------------
+
+# ANSWER ANALYSIS
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS ANSWER_ANALYSIS (
         analysis_id    INTEGER PRIMARY KEY,
@@ -72,9 +72,8 @@ cursor.execute("""
     )
 """)
 
-# --------------------------------------------------
-# ADAPTIVE_ENGINE
-# --------------------------------------------------
+# ADAPTIVE ENGINE
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS ADAPTIVE_ENGINE (
         engine_id       INTEGER PRIMARY KEY,
@@ -85,9 +84,9 @@ cursor.execute("""
     )
 """)
 
-# --------------------------------------------------
-# SKILL_PROGRESS
-# --------------------------------------------------
+
+# SKILL PROGRESS
+
 cursor.execute("""
     CREATE TABLE IF NOT EXISTS SKILL_PROGRESS (
         progress_id   INTEGER PRIMARY KEY,
